@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:kakao_ui_practice/presentation/widget/card.dart';
-import 'package:kakao_ui_practice/presentation/widget/event.dart';
+import 'package:kakao_ui_practice/presentation/widget/home_event.dart';
 import 'package:kakao_ui_practice/presentation/widget/item.dart';
 
 class HomePage extends StatefulWidget {
@@ -105,17 +105,14 @@ class _HomePageState extends State<HomePage> {
             ),
             Padding(
               padding: const EdgeInsets.all(8.0),
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.spaceAround,
-                children: [
-                  ListView(
-                    shrinkWrap: true,
-                    children: [
-                      Event('추석에 KTX공항, 터미널 이용한다면?'),
-                      Event('추석에 KTX공항, 터미널 이용한다면?'),
-                      Event('추석에 KTX공항, 터미널 이용한다면?'),
-                    ],
-                  ),
+              child: ListView(
+                physics: const NeverScrollableScrollPhysics(),
+                shrinkWrap: true,
+                children: const [
+                  HomeEvent(text: '[이벤트] 추석에 KTX공항, 터미널 이용한다면?'),
+                  HomeEvent(text: '[이벤트] 추석에 KTX공항, 터미널 이용한다면?'),
+                  HomeEvent(text: '[이벤트] 추석에 KTX공항, 터미널 이용한다면?'),
+                  HomeEvent(text: '[이벤트] 추석에 KTX공항, 터미널 이용한다면?'),
                 ],
               ),
             ),
