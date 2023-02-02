@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:kakao_ui_practice/presentation/widget/card.dart';
+import 'package:kakao_ui_practice/presentation/widget/home_card.dart';
 import 'package:kakao_ui_practice/presentation/widget/home_event.dart';
 import 'package:kakao_ui_practice/presentation/widget/item.dart';
 
@@ -62,34 +62,37 @@ class _HomePageState extends State<HomePage> {
               child: SizedBox(
                 height: 170,
                 child: PageView(
-                  children: [
-                    buildCard(
-                        '그러게 일찍 좀',
-                        Color(Colors.white.value),
-                        '일어나지 그랬어',
-                        Color(Colors.white.value),
-                        '기왕 늦은거 편하게 택시타고 가자',
-                        Color(Colors.black.value),
-                        'https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861effd194bae87d73dd00522794070855d',
-                        Color(Colors.lightGreen.value)),
-                    buildCard(
-                        '현대백화점에',
-                        Color(Colors.black.value),
-                        '주차시 추석선물!',
-                        Color(Colors.black.value),
-                        '카카오 T 주차 오픈기념, 풍성하게 드려요',
-                        Color(Colors.black.value),
-                        'https://img.seoul.co.kr/img/upload/2021/11/24/SSI_20211124170021_O2.png',
-                        Color(Colors.yellowAccent.value)),
-                    buildCard(
-                        '당신의 이동을',
-                        Color(Colors.white.value),
-                        '연구합니다',
-                        Color(Colors.white.value),
-                        '모빌리티 리포트가 궁금하다면?',
-                        Color(Colors.black.value),
-                        'https://www.hyundai.com/static/images/hyu_logo_og_image.jpg',
-                        Color(Colors.blueGrey.value)),
+                  children: const [
+                    HomeCard(
+                      backGroundColor: Colors.lightGreen,
+                      firstText: '그러게 일찍 좀',
+                      firstTextColor: Colors.white,
+                      secondText: '일어나지 그랬어',
+                      secondTextColor: Colors.white,
+                      thirdText: '기왕 늦은거 편하게 택시타고 가자',
+                      thirdTextColor: Colors.black,
+                      imageUrl: 'https://item.kakaocdn.net/do/d84248170c2c52303db27306a00fb861effd194bae87d73dd00522794070855d',
+                    ),
+                    HomeCard(
+                      backGroundColor: Colors.yellowAccent,
+                      firstText: '현대백화점에',
+                      firstTextColor: Colors.black,
+                      secondText: '주차시 추석선물!',
+                      secondTextColor: Colors.black,
+                      thirdText: '카카오 T 주차 오픈기념, 풍성하게 드려요',
+                      thirdTextColor: Colors.black,
+                      imageUrl: 'https://img.seoul.co.kr/img/upload/2021/11/24/SSI_20211124170021_O2.png',
+                    ),
+                    HomeCard(
+                      backGroundColor: Colors.grey,
+                      firstText: '당신의 이동을',
+                      firstTextColor: Colors.white,
+                      secondText: '연구합니다',
+                      secondTextColor: Colors.white,
+                      thirdText: '모빌리티 리포트가 궁금하다면?',
+                      thirdTextColor: Colors.black,
+                      imageUrl: 'https://www.hyundai.com/static/images/hyu_logo_og_image.jpg',
+                    ),
                   ],
                 ),
               ),
